@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Lock, PoliceBadge } from "lucide-react";
+import { Lock, Shield } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 const AdminLogin = () => {
@@ -30,7 +30,7 @@ const AdminLogin = () => {
     <Card className="w-full max-w-md mx-auto animate-fadeIn">
       <CardHeader className="space-y-1">
         <div className="flex items-center justify-center mb-4">
-          <PoliceBadge className="h-12 w-12 text-primary" />
+          <Shield className="h-12 w-12 text-primary" />
         </div>
         <CardTitle className="text-2xl font-bold text-center">Admin Login</CardTitle>
         <CardDescription className="text-center">
