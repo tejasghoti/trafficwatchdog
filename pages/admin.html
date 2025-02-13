@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Traffic Watchdog</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <a href="../index.html" class="back-link">
+                <i data-lucide="arrow-left"></i>
+            </a>
+            <div class="card-header">
+                <i data-lucide="shield" class="card-icon"></i>
+                <h1 class="card-title">Admin Login</h1>
+                <p class="card-description">Authorized personnel only</p>
+            </div>
+            
+            <form id="login-form" class="form">
+                <div class="form-group">
+                    <label for="badge-number">Badge Number</label>
+                    <input type="text" id="badge-number" placeholder="Enter your badge number" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-icon">
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                        <i data-lucide="lock"></i>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

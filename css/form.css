@@ -1,0 +1,233 @@
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 32rem;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.back-link {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: var(--text);
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card-icon {
+    width: 3rem;
+    height: 3rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    color: var(--text-muted);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    color: var(--text);
+    font-size: 0.875rem;
+}
+
+input,
+select,
+textarea {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: var(--text);
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(216, 180, 254, 0.1);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon input {
+    padding-right: 2.5rem;
+}
+
+.input-icon i {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.file-upload {
+    border: 2px dashed var(--border-color);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    transition: border-color 0.2s;
+}
+
+.file-upload.dragover {
+    border-color: var(--accent);
+    background: rgba(216, 180, 254, 0.05);
+}
+
+.preview-container {
+    cursor: pointer;
+}
+
+.upload-icon {
+    width: 3rem;
+    height: 3rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.file-hint {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+#file-upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.submit-button {
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Image preview styles */
+.preview-image {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.remove-image {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: #ef4444;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.remove-image:hover {
+    background: #dc2626;
+    transform: scale(1.1);
+}
+
+/* Toast notifications */
+.toast-container {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 1000;
+}
+
+.toast {
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    background: white;
+    color: #1a1a1a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.toast.success {
+    background: linear-gradient(to right, #22c55e, #16a34a);
+    color: white;
+}
+
+.toast.error {
+    background: linear-gradient(to right, #ef4444, #dc2626);
+    color: white;
+}
