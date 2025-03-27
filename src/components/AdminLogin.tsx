@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -5,11 +6,12 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Lock, Shield, ArrowLeft } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const AdminLogin = () => {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,13 +20,15 @@ const AdminLogin = () => {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
     
+    // For demo purposes, always succeed
     toast({
-      title: "Login Failed",
-      description: "Please check your credentials and try again.",
-      variant: "destructive",
+      title: "Login Successful",
+      description: "Welcome to the Admin Dashboard",
+      variant: "default",
     });
     
     setLoading(false);
+    navigate("/admin/dashboard");
   };
 
   return (

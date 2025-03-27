@@ -16,8 +16,8 @@ form.addEventListener('submit', async (e) => {
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500));
         
-        // Show error message (for demo purposes)
-        window.toast.show('Invalid credentials. Please try again.', 'error');
+        // Instead of showing error, redirect to the React admin dashboard
+        window.location.href = "/admin/dashboard";
         
     } catch (error) {
         window.toast.show('Login failed. Please try again.', 'error');
